@@ -1,0 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* End Reset CSS */
+
+/* Begin Site Styles */
+
+/* 18px base body text */
+/* 22px baseline grid */
+/* Golden Section modular scale: 1.618 */
+/* ^^ architecture nerd */
+
+/* Base Styles */
+
+html {
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+
+	font-size: 1.125em; /* 18px / 16px = 1.125em */
+	line-height: 1.222em; /*22px / 18px = 1.222em, or ~ 120% of the font size */
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
+	color: #222; /* Very dark shade of gray; background will appear black */
+	background-color: #F0F0F0; /* Very light shade of gray; text will appear white */
+}
+
+body {
+	padding-top: 2.444em; /* 44px / 18px = 2.444em two gridlines */
+	padding-left: 1.222em; /* 22px / 18px = 1.222 */
+  padding-right: 1.222em; /* 22px / 18px = 1.222 */
+}
+
+p, ul {
+  padding-bottom: 1.222em; /* 22px / 18px = 1.222 one gridline */
+}
+
+ul {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+h1 {
+ font-size: 2.618em; /* 47.123px / 18px = 2.618em -- GS */
+ line-height: 1.222em; /* 22px / 18px = 1.222em; one gridline */
+}
+
+h2 {
+	font-size: 2.618em; /* 47.123px / 18px = 2.618em -- GS */
+	line-height: 1.833em; /* 33px / 18px = 1.833em; one and a half gridlines */
+}
+
+h3 {
+ font-size: 1.618em; /* 29.124px / 18px = 1.618em -- GS */
+ line-height: 1.222em; /* 22px / 18px = 0.755em; one gridlines */
+}
+
+p {
+	font-size: 1.125em; /* 18px / 16px = 1.125em -- GS */
+	line-height: 1.222em; /* 22px / 18px = 1.222em; one gridline */
+}
+
+/* Layout Styles */
+/* ID selectors (major landmark/global html structures) */
+
+#navigation {
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#navigation li {
+  float:left;
+  width: 25%;
+}
+.flexbox #navigation ul {
+	display: flex;
+}
+.flexbox #navigation li {
+	float: none;
+}
+
+.flexbox #header {
+	display: flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+}
+
+
+/* Modular Styles */
+/* Class selectors, sometimes descendent child selectors repeating styles throughout a site/page */
+
+
+#navigation a {
+	display: block;
+  padding-top: 0.611em; /* 11 / 18 = .611 */
+	color: #585959;
+	text-transform:uppercase;
+	text-align: center;
+	text-shadow: 1px 1px 2px #585959; /* offset-x | offset-y | blur-radius | color */
+  text-decoration: none;
+	font-size: .75em;
+}
+
+#navigation ul{
+  list-style-type: none;
+}
+
+/* State Styles */
+/* JavaScript or media-query dependent styles */
+
+@media screen and (min-width: 280px) {
+	body {
+		padding-left: 6.875%; /* 22px / 320px = 0.06875 */
+		padding-right: 6.875%; /* 22px / 320px = 0.06875 */
+	}
+}
+
+@media screen and (min-width: 480px) {
+	#navigation a {
+		font-size: 1.125em;
+	}
+}
+
+	@media screen and (min-width: 720px) {
+		h1 {
+			font-size: 4.236em; /* 76.244px / 18px = 4.236em -- GS */
+			line-height: 1.833em; /* 33px / 18px = 1.833em; one and a half gridlines */
+		}
+	}
+
+	@media screen and (min-width: 920px) {
+	/*
+	  2-column grid for viewports larger than 920px
+		920px / whole screen
+	  60px / margins (total)
+	  40px / gutter
+		860px / content-width
+		410px / column width
+	*/
+	  body {
+	    padding-right: 4.347826%; /* 40 / 920 = 0.04347826 */
+	    padding-left: 4.347826%; /* 40 / 920 = 0.04347826 */
+	  }
+	  .primary {
+	    width: 47.6744186%; /* 410 / 860 = 0.476744186 */
+	    float: left;
+	  }
+		.primary:nth-of-type(2n){
+			float: none;
+			margin-left: 52.3255814% /* 450 / 860 = 0.523255814 */
+		}
+		.content {
+			float: left;
+		}
+		.flexbox .content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.flexbox .primary {
+			float: none;
+			margin-left: 0;
+		}
+		.cssgrid .content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 4.6511627% /* 40 / 860 = 0.046511627 */
+		}
+		.cssgrid .primary {
+			width: auto;
+		}
+}
+
+	  #footer {
+	      clear: both;
+	      float: none;
+	  }
+
+
+/* Responsive Images */
+
+img {
+	display: block;
+/* make new images for responsive design at specific dimensions */
+	max-width: 220px;
+	padding-bottom: 0.611em; /* 11 / 22 = 0.611 One-half empty gridline (11px) */
+}
+figcaption {
+	font-size: 1em; /* 18px / 18px = 1em */
+	line-height: 1.222em; /* 22px / 18px - 1.222em; one gridlines */
+	font-family: Helvetica, Arial, sans-serif;
+	padding-bottom: 1.222em; /* 22px / 18px = 1.222 one gridline */
+}
