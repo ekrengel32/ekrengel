@@ -159,6 +159,10 @@ p {
   list-style-type: none;
 }
 
+#contact a {
+	  text-decoration: none;
+}
+
 /* State Styles */
 /* JavaScript or media-query dependent styles */
 
