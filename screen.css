@@ -172,14 +172,13 @@ p {
 	}
 }
 
-	@media screen and (min-width: 720px) {
+@media screen and (min-width: 720px) {
 		h1 {
 			font-size: 4.236em; /* 76.244px / 18px = 4.236em -- GS */
 			line-height: 1.833em; /* 33px / 18px = 1.833em; one and a half gridlines */
 		}
 	}
-
-	@media screen and (min-width: 920px) {
+@media screen and (min-width: 920px) {
 	/*
 	  2-column grid for viewports larger than 920px
 		920px / whole screen
@@ -222,10 +221,10 @@ p {
 		}
 }
 
-	  #footer {
-	      clear: both;
-	      float: none;
-	  }
+#footer {
+    clear: both;
+    float: none;
+}
 
 
 /* Responsive Images */
