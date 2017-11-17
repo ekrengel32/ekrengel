@@ -68,7 +68,7 @@ html {
 
 	font-size: 1.125em; /* 18px / 16px = 1.125em */
 	line-height: 1.222em; /*22px / 18px = 1.222em, or ~ 120% of the font size */
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 	text-align: left;
 	color: #222; /* Very dark shade of gray; background will appear black */
 	background-color: #F0F0F0; /* Very light shade of gray; text will appear white */
@@ -90,11 +90,13 @@ ul {
 }
 
 h1 {
- font-size: 2.618em; /* 47.123px / 18px = 2.618em -- GS */
- line-height: 1.222em; /* 22px / 18px = 1.222em; one gridline */
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 2.618em; /* 47.123px / 18px = 2.618em -- GS */
+	line-height: 1.222em; /* 22px / 18px = 1.222em; one gridline */
 }
 
 h2 {
+	font-family: 'Cabin', Helvetica, Arial, sans-serif;
 	font-size: 2.618em; /* 47.123px / 18px = 2.618em -- GS */
 	line-height: 1.833em; /* 33px / 18px = 1.833em; one and a half gridlines */
 }
@@ -105,6 +107,7 @@ h3 {
 }
 
 p {
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	font-size: 1.125em; /* 18px / 16px = 1.125em -- GS */
 	line-height: 1.222em; /* 22px / 18px = 1.222em; one gridline */
 }
